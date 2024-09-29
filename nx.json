@@ -4,36 +4,16 @@
         "default": {
             "runner": "@nrwl/workspace/tasks-runners/default",
             "options": {
-                "cacheableOperations": ["build", "test", "test:eslint", "package", "prepare", "build:travis"]
+                "cacheableOperations": ["build", "test", "test:eslint", "package", "prepare", "build:travis"],
+                "accessToken": "YjA4ZDM4MDEtNjViOS00NjRlLWFjMjEtY2UzOTBhMjgzNzk1fHJlYWQtd3JpdGU="
             }
         }
     },
     "targetDependencies": {
-        "build": [
-            {
-                "target": "build",
-                "projects": "dependencies"
-            }
-        ],
-        "prepare": [
-            {
-                "target": "prepare",
-                "projects": "dependencies"
-            }
-        ],
-        "package": [
-            {
-                "target": "package",
-                "projects": "dependencies"
-            }
-        ]
+        "build": [{ "target": "build", "projects": "dependencies" }],
+        "prepare": [{ "target": "prepare", "projects": "dependencies" }],
+        "package": [{ "target": "package", "projects": "dependencies" }]
     },
-    "affected": {
-        "defaultBase": "master"
-    },
-    "pluginsConfig": {
-        "@nrwl/js": {
-            "analyzeSourceFiles": false
-        }
-    }
+    "affected": { "defaultBase": "master" },
+    "pluginsConfig": { "@nrwl/js": { "analyzeSourceFiles": false } }
 }
